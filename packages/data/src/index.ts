@@ -185,15 +185,14 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }): SynthetixData =
 			: null;
 	},
 	rateUpdates: async (params?: RateUpdateQueryParams): Promise<RateUpdate[] | null> => {
-		console.log('HEEEEERE')
 		const response = await getData({
 			params,
 			queryMethod: createRateUpdatesQuery,
 			networkId,
 			endpoints: {
 				[NetworkId.Mainnet]: l1Endpoints.rates,
-				[NetworkId['Kovan-Ovm']]: l1Endpoints.rates,
-				[NetworkId['Mainnet-Ovm']]: l1Endpoints.rates,
+				[NetworkId['Kovan-Ovm']]: l2Endpoints.exchangesKovan,
+				[NetworkId['Mainnet-Ovm']]: l2Endpoints.exchangesKovan,
 			},
 		});
 		return response != null
