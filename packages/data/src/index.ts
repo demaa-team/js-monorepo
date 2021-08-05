@@ -185,6 +185,7 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }): SynthetixData =
 			: null;
 	},
 	rateUpdates: async (params?: RateUpdateQueryParams): Promise<RateUpdate[] | null> => {
+		console.log('HEEEEERE')
 		const response = await getData({
 			params,
 			queryMethod: createRateUpdatesQuery,
