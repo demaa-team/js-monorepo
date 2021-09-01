@@ -85,7 +85,7 @@ export type SynthExchangeExpanded = SynthExchange & {
 	hash: string;
 };
 
-export type DailyTotalActiveStakersParams = {} & BaseQueryParams;
+export type DailyTotalActiveStakersParams = BaseQueryParams;
 
 export type ExchangeTotalsParams = {
 	timeSeries: string;

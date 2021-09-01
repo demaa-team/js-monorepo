@@ -77,6 +77,9 @@ const calculateTimestampForPeriod = (periodInHours: number): number =>
 
 const DEFAULT_ENDPOINTS = {
 	[NetworkId.Mainnet]: l1Endpoints.snx,
+	[NetworkId['Mainnet-Ovm']]: l2Endpoints.snx,
+	[NetworkId.Kovan]: l1Endpoints.snxKovan,
+	[NetworkId['Kovan-Ovm']]: l2Endpoints.snxKovan,
 };
 
 const getData = async ({
@@ -182,7 +185,10 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 			params,
 			queryMethod: queries.createSnxPriceQuery,
 			networkId,
-			endpoints: { [NetworkId.Mainnet]: l1Endpoints.rates },
+			endpoints: {
+				[NetworkId.Mainnet]: l1Endpoints.rates,
+				[NetworkId['Mainnet-Ovm']]: l2Endpoints.exchanges,
+			},
 		});
 		return response != null
 			? response[timeSeriesEntityMap[params.timeSeries]].map(queries.parseSnxPrice)
@@ -222,7 +228,10 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 			params,
 			queryMethod: queries.createShortsQuery,
 			networkId,
-			endpoints: { [NetworkId.Mainnet]: l1Endpoints.shorts },
+			endpoints: {
+				[NetworkId.Mainnet]: l1Endpoints.shorts,
+				[NetworkId['Mainnet-Ovm']]: l2Endpoints.shorts,
+			},
 		});
 		return response != null ? response.shorts.map(queries.parseShort) : null;
 	},
@@ -235,7 +244,9 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 			networkId,
 			endpoints: {
 				[NetworkId.Mainnet]: l1Endpoints.exchanger,
+				[NetworkId['Mainnet-Ovm']]: l2Endpoints.exchanger,
 				[NetworkId.Kovan]: l1Endpoints.exchangerKovan,
+				[NetworkId['Kovan-Ovm']]: l2Endpoints.exchangerKovan,
 			},
 		});
 		return response != null
@@ -246,30 +257,6 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 			  )
 			: null;
 	},
-	binaryOptionsMarkets: async (
-		params?: BinaryOptionsMarketsParams
-	): Promise<OptionsMarket[] | null> => {
-		const response = await getData({
-			params,
-			queryMethod: queries.createBinaryOptionsMarketsQuery,
-			networkId,
-			endpoints: { [NetworkId.Mainnet]: l1Endpoints.binaryOptions },
-		});
-		return response != null ? response.markets.map(queries.parseBinaryOptionsMarkets) : null;
-	},
-	binaryOptionsTransactions: async (
-		params?: BinaryOptionsTransactionsParams
-	): Promise<OptionsTransaction[] | null> => {
-		const response = await getData({
-			params,
-			queryMethod: queries.createBinaryOptionTransactionsQuery,
-			networkId,
-			endpoints: { [NetworkId.Mainnet]: l1Endpoints.binaryOptions },
-		});
-		return response != null
-			? response.optionTransactions.map(queries.parseBinaryOptionTransactions)
-			: null;
-	},
 	exchangeTotals: async (params?: ExchangeTotalsParams): Promise<ExchangeTotals[] | null> => {
 		const response = await getData({
 			params,
@@ -277,11 +264,13 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 			networkId,
 			endpoints: {
 				[NetworkId.Mainnet]: l1Endpoints.exchanges,
+				[NetworkId['Mainnet-Ovm']]: l2Endpoints.exchanges,
 				[NetworkId.Kovan]: l1Endpoints.exchangesKovan,
+				[NetworkId['Kovan-Ovm']]: l2Endpoints.exchangesKovan,
 			},
 		});
 		return response != null
-			? response[queries.getExchangeTotalsQueryResponseAttr(params?.timeSeries!)].map(
+			? response[queries.getExchangeTotalsQueryResponseAttr(params?.timeSeries ?? '')].map(
 					queries.parseExchangeTotals
 			  )
 			: null;
@@ -295,6 +284,7 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 			networkId,
 			endpoints: {
 				[NetworkId.Mainnet]: l1Endpoints.snx,
+				[NetworkId['Mainnet-Ovm']]: l2Endpoints.snx,
 			},
 		});
 		return response != null
