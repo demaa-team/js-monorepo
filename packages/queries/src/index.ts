@@ -4,8 +4,8 @@ import partial from 'lodash/partial';
 import ethers from 'ethers';
 import { QueryContext } from './context';
 
-import { synthetix, NetworkId } from '@synthetixio/contracts-interface';
-import synthetixData from '@synthetixio/data';
+import { synthetix, NetworkId } from 'demaa-contracts-interface';
+import synthetixData from 'demaa-query-data';
 
 import { UseQueryResult } from 'react-query';
 

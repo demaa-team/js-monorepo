@@ -1,6 +1,6 @@
 import { useQuery, UseQueryOptions } from 'react-query';
 
-import { CurrencyKey, Synths } from '@synthetixio/contracts-interface';
+import { CurrencyKey, Synths } from 'demaa-contracts-interface';
 import { sUSD_EXCHANGE_RATE } from '../../currency';
 import { PERIOD_IN_HOURS, Period } from '../../constants';
 

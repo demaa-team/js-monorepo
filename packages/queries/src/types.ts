@@ -1,5 +1,5 @@
 import Wei from '@synthetixio/wei';
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 
 export type GasPrices = {
 	fastest: number;

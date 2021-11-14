@@ -77,9 +77,11 @@ export const parseShortLoanChanges = ({
 	loanAfter,
 	timestamp,
 	blockNumber,
+	rate,
 }: Omit<ShortLoanChange, 'short'>): Omit<ShortLoanChange, 'short'> => ({
 	amount: formatEther(amount),
 	id,
+	rate: Number(rate),
 	isRepayment: Boolean(isRepayment),
 	loanAfter: formatEther(loanAfter),
 	timestamp: formatTimestamp(timestamp),

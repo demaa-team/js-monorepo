@@ -14,7 +14,7 @@ import {
 	decode,
 	defaults,
 	getFeeds,
-} from 'synthetix';
+} from 'synthetix-demaa';
 import { ethers } from 'ethers';
 
 import {
@@ -31,7 +31,7 @@ import {
 	Token,
 } from './types';
 
-import { Synths } from '../generated/mainnet';
+import { Synths } from '../generated/mumbai';
 
 import { ERRORS } from './constants';
 

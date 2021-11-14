@@ -2,7 +2,7 @@ import subHours from 'date-fns/subHours';
 import { request } from 'graphql-request';
 // @ts-ignore
 // eslint-disable-next-line import/no-unresolved
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 
 import { l1Endpoints, l2Endpoints } from './constants';
 import * as queries from '../queries';
@@ -77,6 +77,7 @@ const calculateTimestampForPeriod = (periodInHours: number): number =>
 
 const DEFAULT_ENDPOINTS = {
 	[NetworkId.Mainnet]: l1Endpoints.snx,
+	[NetworkId.Mumbai]: l1Endpoints.snx,
 	[NetworkId['Mainnet-Ovm']]: l2Endpoints.snx,
 	[NetworkId.Kovan]: l1Endpoints.snxKovan,
 	[NetworkId['Kovan-Ovm']]: l2Endpoints.snxKovan,
@@ -124,10 +125,7 @@ const synthetixData = ({ networkId }: { networkId: NetworkId }) => ({
 	},
 	synthetix: async (params?: BaseQueryParams): Promise<Synthetix | null> => {
 		const query = queries.createSynthetixQuery(params);
-		const response = await request(
-			networkId === NetworkId.Mainnet ? l1Endpoints.snx : l2Endpoints.snx,
-			query
-		);
+		const response = await request(l1Endpoints.snx, query);
 		return response != null ? queries.parseSynthetix(response.synthetixes[0]) : null;
 	},
 	feesClaimed: async (params?: FeesClaimedParams): Promise<FeesClaimed[] | null> => {

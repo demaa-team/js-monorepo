@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query';
-import { SynthExchangeExpanded } from '@synthetixio/data';
+import { SynthExchangeExpanded } from 'demaa-query-data';
 import { QueryContext } from '../../context';
 
 export const useWalletTradesQuery = (

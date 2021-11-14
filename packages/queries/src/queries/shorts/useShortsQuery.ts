@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query';
-import { CurrencyKey, Synths } from '@synthetixio/contracts-interface';
+import { CurrencyKey, Synths } from 'demaa-contracts-interface';
 import { QueryContext } from '../../context';
 
 import { ShortRewardsData } from '../../types';

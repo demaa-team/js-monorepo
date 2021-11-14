@@ -1,6 +1,6 @@
 import { useQuery, UseQueryOptions } from 'react-query';
 import { ethers } from 'ethers';
-import { CurrencyKey, Synth } from '@synthetixio/contracts-interface';
+import { CurrencyKey, Synth } from 'demaa-contracts-interface';
 import { wei } from '@synthetixio/wei';
 
 import { QueryContext } from '../../context';

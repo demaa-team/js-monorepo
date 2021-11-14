@@ -1,7 +1,7 @@
 import { useQuery, UseQueryOptions } from 'react-query';
 import { BigNumberish, ethers } from 'ethers';
 
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 import { CRYPTO_CURRENCY_MAP, iStandardSynth, synthToAsset } from '../../currency';
 import { QueryContext } from '../../context';
 import { Rates } from '../../types';

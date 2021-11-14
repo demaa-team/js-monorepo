@@ -1,15 +1,15 @@
 export const l1Endpoints = {
-	snx: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix',
+	snx: 'https://api.thegraph.com/subgraphs/name/demaa-team/issuance',
 	snxKovan: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/kovan-issuance',
-	depot: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-depot',
-	exchanges: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-exchanges',
+	depot: 'https://api.thegraph.com/subgraphs/name/demaa-team/depot',
+	exchanges: 'https://api.thegraph.com/subgraphs/name/demaa-team/exchanges',
 	exchangesKovan: 'https://api.thegraph.com/subgraphs/name/vbstreetz/exchanges-kovan',
-	etherCollateral: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-loans',
-	limitOrders: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-limit-orders',
-	exchanger: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-exchanger',
+	etherCollateral: 'https://api.thegraph.com/subgraphs/name/demaa-team/loans',
+	limitOrders: 'https://api.thegraph.com/subgraphs/name/demaa-team/limit-orders',
+	exchanger: 'https://api.thegraph.com/subgraphs/name/demaa-team/exchanger',
 	exchangerKovan: 'https://api.thegraph.com/subgraphs/name/vbstreetz/exchanger-kovan',
-	liquidations: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-liquidations',
-	shorts: 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-shorts',
+	liquidations: 'https://api.thegraph.com/subgraphs/name/demaa-team/liquidations',
+	shorts: 'https://api.thegraph.com/subgraphs/name/demaa-team/shorts',
 };
 
 export const l2Endpoints = {

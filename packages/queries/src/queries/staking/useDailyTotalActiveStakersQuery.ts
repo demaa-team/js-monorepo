@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query';
-import { DailyTotalActiveStakers } from '@synthetixio/data';
+import { DailyTotalActiveStakers } from 'demaa-query-data';
 import { QueryContext } from '../../context';
 
 export const useDailyTotalActiveStakersQuery = (

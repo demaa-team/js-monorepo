@@ -1,13 +1,12 @@
 overwrite: true
 schema:
   [
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-loans',
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-liquidations',
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-depot',
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-exchanger',
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-exchanges',
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-shorts',
-    'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix',
+    'https://api.thegraph.com/subgraphs/name/demaa-team/liquidations',
+    'https://api.thegraph.com/subgraphs/name/demaa-team/depot',
+    'https://api.thegraph.com/subgraphs/name/demaa-team/exchanger',
+    'https://api.thegraph.com/subgraphs/name/demaa-team/exchanges',
+    'https://api.thegraph.com/subgraphs/name/demaa-team/shorts',
+    'https://api.thegraph.com/subgraphs/name/demaa-team/issuance',
   ]
 generates:
   generated/graphql.ts:

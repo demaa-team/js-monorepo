@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query';
-import { DebtSnapshot } from '@synthetixio/data/build/node/generated/graphql';
+import { DebtSnapshot } from 'demaa-query-data/build/node/generated/graphql';
 
 import { QueryContext } from '../../context';
 

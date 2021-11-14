@@ -1,7 +1,7 @@
 import keyBy from 'lodash/keyBy';
 import { Rates } from './types';
 
-import { CurrencyKey, Synths } from '@synthetixio/contracts-interface';
+import { CurrencyKey, Synths } from 'demaa-contracts-interface';
 import { wei } from '@synthetixio/wei';
 
 export const ETH_ADDRESS = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
@@ -41,15 +41,7 @@ export enum CryptoCurrency {
 	YFI = 'YFI',
 }
 
-export const FIAT_SYNTHS: Set<CurrencyKey> = new Set([
-	Synths.sUSD,
-	Synths.sEUR,
-	Synths.sJPY,
-	Synths.sAUD,
-	Synths.sGBP,
-	Synths.sCHF,
-	Synths.sKRW,
-]);
+export const FIAT_SYNTHS: Set<CurrencyKey> = new Set([Synths.sUSD]);
 
 export const CRYPTO_CURRENCY = Object.keys(CryptoCurrency);
 

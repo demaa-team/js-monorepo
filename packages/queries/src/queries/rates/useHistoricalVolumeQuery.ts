@@ -7,7 +7,7 @@ import { calculateTimestampForPeriod } from './utils';
 import { QueryContext } from '../../context';
 import { HistoricalVolume } from '../../types';
 
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 
 const useHistoricalVolumeQuery = (
 	ctx: QueryContext,

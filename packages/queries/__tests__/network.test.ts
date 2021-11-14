@@ -1,4 +1,4 @@
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 import { wei } from '@synthetixio/wei';
 import { renderHook } from '@testing-library/react-hooks';
 import { ethers } from 'ethers';

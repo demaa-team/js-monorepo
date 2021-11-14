@@ -1,4 +1,4 @@
-import { RateUpdate } from '@synthetixio/data/build/node/generated/graphql';
+import { RateUpdate } from 'demaa-query-data/build/node/generated/graphql';
 import subHours from 'date-fns/subHours';
 
 import { BaseRateUpdate } from '../../types';

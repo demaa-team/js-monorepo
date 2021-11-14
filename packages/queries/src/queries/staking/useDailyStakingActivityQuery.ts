@@ -1,7 +1,7 @@
 import { useQuery, UseQueryOptions } from 'react-query';
 
 import { QueryContext } from '../../context';
-import { DailyIssued, DailyBurned } from '@synthetixio/data';
+import { DailyIssued, DailyBurned } from 'demaa-query-data';
 
 const useDailyBurnedQuery = (
 	ctx: QueryContext,

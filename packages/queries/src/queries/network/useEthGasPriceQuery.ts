@@ -4,10 +4,12 @@ import { QueryContext } from '../../context';
 import { GasPrices } from '../../types';
 import { formatGwei } from '../../utils';
 
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 
+// WARNNING ETH_GAS_STATION_API_URL shall not take effect anymore
 const ETH_GAS_STATION_API_URL = 'https://ethgasstation.info/json/ethgasAPI.json';
-const GAS_NOW_API_URL = 'https://www.gasnow.org/api/v3/gas/price?utm_source=kwenta';
+// replace this with https://gasstation-mainnet.matic.network when in mainnet
+const GAS_NOW_API_URL = 'https://gasstation-mumbai.matic.today';
 
 type EthGasStationResponse = {
 	average: number;
@@ -25,14 +27,12 @@ type EthGasStationResponse = {
 };
 
 type GasNowResponse = {
-	code: number;
-	data: {
-		rapid: number;
-		fast: number;
-		standard: number;
-		slow: number;
-		timestamp: number;
-	};
+	safeLow: number;
+	standard: number;
+	fast: number;
+	fastest: number;
+	blockTime: number;
+	blockNumber: number;
 };
 
 const useEthGasPriceQuery = (ctx: QueryContext, options?: UseQueryOptions<GasPrices, Error>) => {
@@ -42,7 +42,7 @@ const useEthGasPriceQuery = (ctx: QueryContext, options?: UseQueryOptions<GasPri
 			if (ctx.networkId === NetworkId.Mainnet) {
 				try {
 					const result = await axios.get<GasNowResponse>(GAS_NOW_API_URL);
-					const { standard, fast, rapid: fastest } = result.data.data;
+					const { standard, fast, fastest } = result.data;
 
 					return {
 						fastest: Math.round(formatGwei(fastest)),

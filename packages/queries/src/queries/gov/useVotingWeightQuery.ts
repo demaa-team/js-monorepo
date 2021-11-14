@@ -7,7 +7,7 @@ import { SPACE_KEY } from './constants';
 import { SpaceData, SpaceStrategy } from '../../types';
 import { QueryContext } from '../../context';
 
-import { getNetworkFromId } from '@synthetixio/contracts-interface';
+import { getNetworkFromId } from 'demaa-contracts-interface';
 
 const useVotingWeightQuery = (
 	ctx: QueryContext,

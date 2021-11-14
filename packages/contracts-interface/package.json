@@ -1,6 +1,6 @@
 {
-	"name": "@synthetixio/contracts-interface",
-	"version": "2.50.1-ovm-alpha",
+	"name": "demaa-contracts-interface",
+	"version": "1.0.0-mumbai",
 	"description": "A library for interacting with Synthetix smart contracts",
 	"source": "./src/index.ts",
 	"main": "./build/node/src/index.js",
@@ -23,17 +23,17 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Synthetixio/js-monorepo"
+		"url": "https://github.com/demaa-team/js-monorepo"
 	},
-	"author": "Synthetix",
+	"author": "Demaa",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Synthetixio/js-monorepo/issues"
+		"url": "https://github.com/demaa-team/js-monorepo/issues"
 	},
 	"dependencies": {
 		"ethers": "5.4.6",
 		"lodash": "4.17.19",
-		"synthetix": "2.50.1-ovm-alpha",
+		"synthetix-demaa": "1.0.0-mumbai",
 		"web3-utils": "1.2.11"
 	},
 	"devDependencies": {

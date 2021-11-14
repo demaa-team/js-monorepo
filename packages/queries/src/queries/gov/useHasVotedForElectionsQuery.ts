@@ -6,7 +6,7 @@ import { Proposal, SpaceData, SpaceStrategy } from '../../types';
 import { getAddress } from 'ethers/lib/utils';
 import { electionAuthor, SPACE_KEY } from './constants';
 import { QueryContext } from '../../context';
-import { getNetworkFromId } from '@synthetixio/contracts-interface';
+import { getNetworkFromId } from 'demaa-contracts-interface';
 
 export enum ProposalStates {
 	ACTIVE = 'active',

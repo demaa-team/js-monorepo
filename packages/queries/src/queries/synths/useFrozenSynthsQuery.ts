@@ -2,7 +2,7 @@ import { useQuery, UseQueryOptions } from 'react-query';
 import compact from 'lodash/compact';
 import { ethers } from 'ethers';
 
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 import { QueryContext } from '../../context';
 import { FrozenSynths } from '../../types';
 

@@ -1,1 +1,1 @@
-declare module 'synthetix';
+declare module 'synthetix-demaa';

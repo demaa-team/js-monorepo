@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 
-import { Synths } from '../generated/mainnet';
+import { Synths } from '../generated/mumbai';
 
 export enum Network {
 	Mainnet = 'mainnet',
@@ -8,6 +8,7 @@ export enum Network {
 	Rinkeby = 'rinkeby',
 	Goerli = 'goerli',
 	Kovan = 'kovan',
+	Mumbai = 'mumbai',
 	'Mainnet-Ovm' = 'mainnet-ovm',
 	'Kovan-Ovm' = 'kovan-ovm',
 	'Goerli-Ovm' = 'goerli-ovm',
@@ -19,6 +20,7 @@ export enum NetworkId {
 	Rinkeby = 4,
 	Goerli = 5,
 	Kovan = 42,
+	Mumbai = 80001,
 	'Mainnet-Ovm' = 10,
 	'Kovan-Ovm' = 69,
 }
@@ -140,14 +142,7 @@ export type Config = {
 
 export type CurrencyKey = keyof typeof Synths;
 
-export const FIAT_SYNTHS = new Set([
-	Synths.sEUR,
-	Synths.sJPY,
-	Synths.sUSD,
-	Synths.sAUD,
-	Synths.sGBP,
-	Synths.sCHF,
-]);
+export const FIAT_SYNTHS = new Set([Synths.sUSD]);
 
 export enum CurrencyCategory {
 	'crypto' = 'Crypto',

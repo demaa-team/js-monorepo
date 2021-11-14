@@ -6,7 +6,7 @@ import { QueryContext } from '../../context';
 
 import { calculateTimestampForPeriod } from './utils';
 
-const RATES_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/synthetixio-team/synthetix-rates';
+const RATES_ENDPOINT = 'https://api.thegraph.com/subgraphs/name/demaa-team/rates';
 
 const useCandlesticksQuery = (
 	ctx: QueryContext,

@@ -5,8 +5,8 @@ try {
 	fs.mkdirSync(__dirname + '/generated/');
 } catch {}
 
-for (const network of ['mainnet', 'mainnet-ovm', 'kovan', 'kovan-ovm']) {
-	const synths = require(`synthetix/publish/deployed/${network}/synths.json`);
+for (const network of ['mainnet', 'mainnet-ovm', 'kovan', 'kovan-ovm', 'mumbai']) {
+	const synths = require(`synthetix-demaa/publish/deployed/${network}/synths.json`);
 
 	const genTs = ['export enum Synths {'];
 

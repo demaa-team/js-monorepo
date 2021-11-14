@@ -1,4 +1,4 @@
-import { NetworkId } from '@synthetixio/contracts-interface';
+import { NetworkId } from 'demaa-contracts-interface';
 import Wei, { wei } from '@synthetixio/wei';
 import { useQuery, UseQueryOptions } from 'react-query';
 import { QueryContext } from '../../context';

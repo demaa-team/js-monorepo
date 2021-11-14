@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 
-import type { SynthetixData } from '@synthetixio/data';
-import { SynthetixJS, NetworkId } from '@synthetixio/contracts-interface';
+import type { SynthetixData } from 'demaa-query-data';
+import { SynthetixJS, NetworkId } from 'demaa-contracts-interface';
 
 export interface QueryContext {
 	networkId: NetworkId | null;

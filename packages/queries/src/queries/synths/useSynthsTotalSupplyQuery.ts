@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import { useQuery, UseQueryOptions } from 'react-query';
 
-import { NetworkId, Synths } from '@synthetixio/contracts-interface';
+import { NetworkId, Synths } from 'demaa-contracts-interface';
 import { wei } from '@synthetixio/wei';
 
 import { QueryContext } from '../../context';
@@ -22,9 +22,7 @@ const useSynthsTotalSupplyQuery = (
 				utils: { formatBytes32String, parseBytes32String, formatEther },
 			} = ethers;
 
-			const [sETHKey, sBTCKey, sUSDKey] = [Synths.sETH, Synths.sBTC, Synths.sUSD].map(
-				formatBytes32String
-			);
+			const [sETHKey, sBTCKey, sUSDKey] = [Synths.sETH, Synths.sUSD].map(formatBytes32String);
 
 			const isL2 =
 				NetworkId['Mainnet-Ovm'] === ctx.networkId! || NetworkId['Kovan-Ovm'] === ctx.networkId!;
@@ -88,7 +86,7 @@ const useSynthsTotalSupplyQuery = (
 			let totalSkewValue = wei(0);
 			let totalStakersDebt = wei(0);
 			let ethNegativeEntries = wei(0);
-			let btcNegativeEntries = wei(0);
+			const btcNegativeEntries = wei(0);
 			let usdNegativeEntries = wei(0);
 
 			const supplyData: SynthTotalSupply[] = [];
@@ -100,13 +98,6 @@ const useSynthsTotalSupplyQuery = (
 				let skewValue = value;
 
 				switch (name) {
-					case Synths.sBTC: {
-						btcNegativeEntries = btcShorts.add(btcBorrows);
-
-						skewValue = totalSupply.sub(btcNegativeEntries).mul(btcPrice);
-						break;
-					}
-
 					case Synths.sETH: {
 						const multiCollateralLoansETH = ethShorts.add(ethBorrows);
 						ethNegativeEntries = multiCollateralLoansETH.add(wrapprSETH);

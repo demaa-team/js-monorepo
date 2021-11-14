@@ -1,4 +1,4 @@
-import { FifteenMinuteSnxPrice } from '@synthetixio/data/build/node/generated/graphql';
+import { FifteenMinuteSnxPrice } from 'demaa-query-data/build/node/generated/graphql';
 import { useQuery, UseQueryOptions } from 'react-query';
 import { QueryContext } from '../../context';
 

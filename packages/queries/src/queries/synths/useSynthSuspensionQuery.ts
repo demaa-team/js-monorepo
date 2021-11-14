@@ -1,7 +1,7 @@
 import { useQuery, UseQueryOptions } from 'react-query';
 import { ethers } from 'ethers';
 
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 import { QueryContext } from '../../context';
 import { SynthSuspended, SynthSuspensionReason } from '../../types';
 

@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query';
-import { ExchangeTotals } from '@synthetixio/data';
+import { ExchangeTotals } from 'demaa-query-data';
 import { QueryContext } from '../../context';
 
 export const useExchangeTotalsQuery = (

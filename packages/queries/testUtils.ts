@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { QueryContext } from './src/context';
 
-import { NetworkId, SynthetixJS } from '@synthetixio/contracts-interface';
+import { NetworkId, SynthetixJS } from 'demaa-contracts-interface';
 import { ethers } from 'ethers';
-import { SynthetixData } from '@synthetixio/data';
+import { SynthetixData } from 'demaa-data';
 
 // simple query client wrapper which allows for testing of a
 // query function hook, see https://react-query.tanstack.com/guides/testing

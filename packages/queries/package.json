@@ -1,6 +1,6 @@
 {
-	"name": "@synthetixio/queries",
-	"version": "2.51.0",
+	"name": "demaa-queries",
+	"version": "1.0.0-mumbai",
 	"description": "react-query for pulling synthetix data in react interfaces",
 	"source": "./src/index.ts",
 	"main": "./build/node/src/index.js",
@@ -24,17 +24,17 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Synthetixio/js-monorepo"
+		"url": "https://github.com/demaa-team/js-monorepo"
 	},
-	"author": "Synthetix",
+	"author": "Demaa",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Synthetixio/js-monorepo/issues"
+		"url": "https://github.com/demaa-team/js-monorepo/issues"
 	},
 	"dependencies": {
 		"@snapshot-labs/snapshot.js": "^0.1.11",
-		"@synthetixio/contracts-interface": "2.50.1-ovm-alpha",
-		"@synthetixio/data": "^2.51.0",
+		"demaa-contracts-interface": "1.0.0-mumbai",
+		"demaa-query-data": "1.0.0-mumbai",
 		"@synthetixio/optimism-networks": "2.50.1-ovm-alpha",
 		"@synthetixio/providers": "2.50.1-ovm-alpha",
 		"@synthetixio/transaction-notifier": "2.50.1-ovm-alpha",

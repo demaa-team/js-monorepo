@@ -2,7 +2,7 @@ import { useQuery, UseQueryOptions } from 'react-query';
 
 import Wei, { wei } from '@synthetixio/wei';
 
-import { CurrencyKey } from '@synthetixio/contracts-interface';
+import { CurrencyKey } from 'demaa-contracts-interface';
 import { QueryContext } from '../../context';
 import { synthToContractName } from '../../currency';
 
