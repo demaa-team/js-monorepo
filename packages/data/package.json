@@ -1,6 +1,6 @@
 {
 	"name": "demaa-query-data",
-	"version": "1.0.0-mumbai",
+	"version": "1.1.0-mumbai",
 	"description": "Javascript library for handling queries to Synthetix subgraphs",
 	"source": "./src/index.ts",
 	"main": "./build/node/src/index.js",
@@ -32,7 +32,7 @@
 		"url": "https://github.com/demaa-team/js-monorepo/js-monorepo/issues"
 	},
 	"dependencies": {
-		"demaa-contracts-interface": "1.0.0-mumbai",
+		"demaa-contracts-interface": "1.1.0-mumbai",
 		"bignumber.js": "9.0.1",
 		"date-fns": "2.19.0",
 		"ethers": "5.4.6",

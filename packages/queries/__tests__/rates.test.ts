@@ -31,7 +31,7 @@ describe('@synthetixio/queries rates', () => {
 			BTC: wei(10000),
 			sETH: wei(1000),
 			sBTC: wei(10000),
-			SNX: wei(10),
+			DEM: wei(10),
 		});
 	});
 

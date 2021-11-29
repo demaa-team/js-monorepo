@@ -21,7 +21,7 @@ const useGlobalStakingInfoQuery = (
 				unformattedIssuanceRatio,
 				holders,
 			] = await Promise.all([
-				ctx.snxjs!.contracts.ExchangeRates.rateForCurrency(ethers.utils.formatBytes32String('SNX')),
+				ctx.snxjs!.contracts.ExchangeRates.rateForCurrency(ethers.utils.formatBytes32String('DEM')),
 				ctx.snxjs!.contracts.Synthetix.totalSupply(),
 				ctx.snxjs!.contracts.SynthetixState.lastDebtLedgerEntry(),
 				ctx.snxjs!.contracts.Synthetix[

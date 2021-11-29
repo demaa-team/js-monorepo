@@ -30,7 +30,6 @@ export enum CryptoCurrency {
 	LTC = 'LTC',
 	REN = 'REN',
 	RENBTC = 'renBTC',
-	SNX = 'SNX',
 	TRX = 'TRX',
 	UNI = 'UNI',
 	WBTC = 'wBTC',
@@ -39,6 +38,7 @@ export enum CryptoCurrency {
 	XRP = 'XRP',
 	XTZ = 'XTZ',
 	YFI = 'YFI',
+	DEM = 'DEM',
 }
 
 export const FIAT_SYNTHS: Set<CurrencyKey> = new Set([Synths.sUSD]);
