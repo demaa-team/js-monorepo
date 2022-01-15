@@ -1,6 +1,6 @@
 {
 	"name": "demaa-contracts-interface",
-	"version": "1.1.0-mumbai",
+	"version": "1.5.0-mumbai",
 	"description": "A library for interacting with Synthetix smart contracts",
 	"source": "./src/index.ts",
 	"main": "./build/node/src/index.js",
@@ -33,7 +33,7 @@
 	"dependencies": {
 		"ethers": "5.4.6",
 		"lodash": "4.17.19",
-		"synthetix-demaa": "1.1.0-mumbai",
+		"synthetix-demaa": "1.5.1-mumbai",
 		"web3-utils": "1.2.11"
 	},
 	"devDependencies": {
